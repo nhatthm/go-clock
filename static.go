@@ -4,18 +4,24 @@ import (
 	"time"
 )
 
-type staticClock struct {
+// StaticClock is the clock that has a fixed timestamp.
+type StaticClock struct {
 	timestamp time.Time
 }
 
 // Now returns a fixed timestamp.
-func (c staticClock) Now() time.Time {
+func (c StaticClock) Now() time.Time {
 	return c.timestamp
 }
 
+// Clock provides clock.Clock.
+func (c StaticClock) Clock() Clock {
+	return c
+}
+
 // Fix creates a fixed clock with a given timestamp.
-func Fix(timestamp time.Time) Clock {
-	return staticClock{
+func Fix(timestamp time.Time) StaticClock {
+	return StaticClock{
 		timestamp: timestamp,
 	}
 }

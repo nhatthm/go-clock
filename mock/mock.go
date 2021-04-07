@@ -16,7 +16,10 @@ type Mocker func(tb testing.TB) *Clock
 // NoMock is no mock Clock.
 var NoMock = Mock()
 
-var _ clock.Clock = (*Clock)(nil)
+var (
+	_ clock.Clock    = (*Clock)(nil)
+	_ clock.Provider = (*Clock)(nil)
+)
 
 // Clock is a clock.Clock.
 type Clock struct {
@@ -26,6 +29,11 @@ type Clock struct {
 // Now satisfies clock.Clock.
 func (c *Clock) Now() time.Time {
 	return c.Called().Get(0).(time.Time)
+}
+
+// Clock satisfies clock.Provider.
+func (c *Clock) Clock() clock.Clock {
+	return c
 }
 
 // mock mocks clock.Clock interface.

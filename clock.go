@@ -8,14 +8,20 @@ type Clock interface {
 	Now() time.Time
 }
 
-type clock struct{}
+// TimeClock is a clock that uses `time` package as the source.
+type TimeClock struct{}
 
 // Now returns the current local time.
-func (clock) Now() time.Time {
+func (TimeClock) Now() time.Time {
 	return time.Now()
 }
 
+// Clock provides clock.Clock.
+func (c TimeClock) Clock() Clock {
+	return c
+}
+
 // New creates a live clock that uses `time` package.
-func New() Clock {
-	return clock{}
+func New() TimeClock {
+	return TimeClock{}
 }

@@ -20,3 +20,11 @@ func TestClock_Now(t *testing.T) {
 
 	assert.Equal(t, timestamp, c.Now())
 }
+
+func TestClock_Clock(t *testing.T) {
+	t.Parallel()
+
+	c := mock.NoMock(t)
+
+	assert.Equal(t, c, c.Clock())
+}

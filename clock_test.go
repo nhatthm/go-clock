@@ -18,3 +18,11 @@ func TestClock_Now(t *testing.T) {
 
 	assert.True(t, timestamp.Before(now) || timestamp.Equal(now))
 }
+
+func TestClock_Clock(t *testing.T) {
+	t.Parallel()
+
+	c := clock.New()
+
+	assert.Equal(t, c, c.Clock())
+}
