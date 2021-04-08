@@ -8,6 +8,7 @@ import (
 	mockit "github.com/stretchr/testify/mock"
 
 	"github.com/nhatthm/go-clock"
+	"github.com/nhatthm/go-clock/service"
 )
 
 // Mocker is Clock mocker.
@@ -17,8 +18,8 @@ type Mocker func(tb testing.TB) *Clock
 var NoMock = Mock()
 
 var (
-	_ clock.Clock    = (*Clock)(nil)
-	_ clock.Provider = (*Clock)(nil)
+	_ clock.Clock           = (*Clock)(nil)
+	_ service.ClockProvider = (*Clock)(nil)
 )
 
 // Clock is a clock.Clock.
