@@ -1,5 +1,6 @@
 # Clock
 
+[![GitHub Releases](https://img.shields.io/github/v/release/nhatthm/go-clock)](https://github.com/nhatthm/go-clock/releases/latest)
 [![Build Status](https://github.com/nhatthm/go-clock/actions/workflows/test.yaml/badge.svg)](https://github.com/nhatthm/go-clock/actions/workflows/test.yaml)
 [![codecov](https://codecov.io/gh/nhatthm/go-clock/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/go-clock)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nhatthm/httpmock)](https://goreportcard.com/report/github.com/nhatthm/httpmock)
