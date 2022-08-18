@@ -1,6 +1,6 @@
 package service
 
-import "github.com/nhatthm/go-clock"
+import "go.nhat.io/clock"
 
 // ClockProvider provides clock.Clock.
 type ClockProvider interface {

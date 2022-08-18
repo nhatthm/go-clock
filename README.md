@@ -3,11 +3,21 @@
 [![GitHub Releases](https://img.shields.io/github/v/release/nhatthm/go-clock)](https://github.com/nhatthm/go-clock/releases/latest)
 [![Build Status](https://github.com/nhatthm/go-clock/actions/workflows/test.yaml/badge.svg)](https://github.com/nhatthm/go-clock/actions/workflows/test.yaml)
 [![codecov](https://codecov.io/gh/nhatthm/go-clock/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/go-clock)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nhatthm/httpmock)](https://goreportcard.com/report/github.com/nhatthm/httpmock)
-[![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/github.com/nhatthm/go-clock)
+[![Go Report Card](https://goreportcard.com/badge/go.nhat.io/clock)](https://goreportcard.com/report/go.nhat.io/clock)
+[![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/go.nhat.io/clock)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=PJZSGJN57TDJY)
 
 A library for mocking time in Golang.
+
+## Prerequisites
+
+- `Go >= 1.17`
+
+## Install
+
+```bash
+go get go.nhat.io/clock
+```
 
 ## Usage
 
@@ -18,7 +28,7 @@ The clock will return time using `time` package
 ```go
 package mypackage
 
-import "github.com/nhatthm/go-clock"
+import "go.nhat.io/clock"
 
 type Application struct {
 	clock clock.Clock
@@ -49,7 +59,7 @@ package mypackage
 import (
 	"time"
 
-	"github.com/nhatthm/go-clock"
+	"go.nhat.io/clock"
 )
 
 type Application struct {
@@ -81,7 +91,7 @@ import (
 	"testing"
 	"time"
 
-	clockMock "github.com/nhatthm/go-clock/mock"
+	clockMock "go.nhat.io/clock/mock"
 )
 
 func TestApplication(t *testing.T) {
@@ -101,7 +111,7 @@ func TestApplication(t *testing.T) {
 
 ## `cucumber/godog`
 
-See [nhatthm/clockdog](https://github.com/nhatthm/clockdog)
+See [godogx/clocksteps](https://github.com/godogx/clocksteps)
 
 ## Donation
 

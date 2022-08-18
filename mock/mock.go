@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	mockit "github.com/stretchr/testify/mock"
 
-	"github.com/nhatthm/go-clock"
-	"github.com/nhatthm/go-clock/service"
+	"go.nhat.io/clock"
+	"go.nhat.io/clock/service"
 )
 
 // Mocker is Clock mocker.
