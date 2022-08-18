@@ -1,4 +1,4 @@
-module github.com/nhatthm/go-clock
+module go.nhat.io/clock
 
 go 1.17
 

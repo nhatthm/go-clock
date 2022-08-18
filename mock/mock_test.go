@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/nhatthm/go-clock/mock"
+	"go.nhat.io/clock/mock"
 )
 
 func TestClock_Now(t *testing.T) {
