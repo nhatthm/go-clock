@@ -29,7 +29,7 @@ type Clock struct {
 
 // Now satisfies clock.Clock.
 func (c *Clock) Now() time.Time {
-	return c.Called().Get(0).(time.Time)
+	return c.Called().Get(0).(time.Time) //nolint: errcheck
 }
 
 // Clock satisfies clock.Provider.
