@@ -44,6 +44,8 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Test
+        env:
+          GOFLAGS: ${{ matrix.os == 'macos-latest' && (startsWith(matrix.go-version, '1.21') || startsWith(matrix.go-version, '1.22')) && '-ldflags=-linkmode=external' || '' }}
         run: |
           make test
 
